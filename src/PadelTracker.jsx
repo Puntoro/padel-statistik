@@ -361,7 +361,7 @@ const INITIAL_DEBTS = [
   ]},
 ];
 
-const DATA_VERSION = "2026-08-27-v1"; // Bump this when hardcoded data changes
+const DATA_VERSION = "2026-08-27-v2"; // Bump this when hardcoded data changes
 
 // ============================================================
 // HELPERS
