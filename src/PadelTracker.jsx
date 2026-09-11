@@ -266,6 +266,12 @@ const MATCH_DAYS_2026 = [
     {team1:["Max","René"],team2:["Kasi","Simon V"],winner:1,t1Key:"Max+René",t2Key:"Kasi+Simon V"},
     {team1:["Max","René"],team2:["Kasi","Simon V"],winner:1,t1Key:"Max+René",t2Key:"Kasi+Simon V"},
   ]},
+  { date:"2026-09-10", label:"10.9", players:[{name:"René",s:4,w:3},{name:"Santer",s:4,w:3},{name:"Max",s:4,w:1},{name:"Simon V",s:4,w:1}], teams:[{t:"René+Santer",s:4,w:3},{t:"Max+Simon V",s:4,w:1}], games:[
+    {team1:["René","Santer"],team2:["Max","Simon V"],winner:1,t1Key:"René+Santer",t2Key:"Max+Simon V"},
+    {team1:["René","Santer"],team2:["Max","Simon V"],winner:2,t1Key:"René+Santer",t2Key:"Max+Simon V"},
+    {team1:["René","Santer"],team2:["Max","Simon V"],winner:1,t1Key:"René+Santer",t2Key:"Max+Simon V"},
+    {team1:["René","Santer"],team2:["Max","Simon V"],winner:1,t1Key:"René+Santer",t2Key:"Max+Simon V"},
+  ]},
 ];
 
 const ALL_MATCH_DAYS = [...MATCH_DAYS_2024, ...MATCH_DAYS_2025, ...MATCH_DAYS_2026].sort((a,b) => a.date.localeCompare(b.date));
@@ -286,7 +292,7 @@ const INITIAL_DEBTS = [
     { date: "2026-07-10", type: "platz", amount: -16, desc: "Platz 10.7." },
     { date: "2026-07-31", type: "platz", amount: -16, desc: "Platz 31.7." },
   ]},
-  { person: "Max", amount: 90, note: "Du schuldest", history: [
+  { person: "Max", amount: 59, note: "Du schuldest", history: [
     { date: "2025-01-01", type: "saldo", amount: -0.50, desc: "Übernahme Splitwise-Saldo" },
     { date: "2026-03-01", type: "platz", amount: -62, desc: "Platz 1.3. (14+14+14+20€)" },
     { date: "2026-03-08", type: "platz", amount: -25, desc: "Einzelcourt 8.3." },
@@ -310,8 +316,10 @@ const INITIAL_DEBTS = [
     { date: "2026-07-31", type: "platz", amount: -16, desc: "Platz 31.7." },
     { date: "2026-08-13", type: "platz", amount: -16, desc: "Platz 13.8." },
     { date: "2026-08-27", type: "platz", amount: -16, desc: "Platz 27.8." },
+    { date: "2026-09-02", type: "platz", amount: -15, desc: "Platz 2.9." },
+    { date: "2026-09-10", type: "platz", amount: -16, desc: "Platz 10.9." },
   ]},
-  { person: "Kasi", amount: 138, note: "Du schuldest", history: [
+  { person: "Kasi", amount: 123, note: "Du schuldest", history: [
     { date: "2025-01-01", type: "saldo", amount: 84, desc: "Übernahme Splitwise-Saldo" },
     { date: "2026-03-20", type: "platz", amount: -14, desc: "Platz 20.3." },
     { date: "2026-04-29", type: "platz", amount: 20, desc: "Kasi hat für dich bezahlt (andere Gruppe)" },
@@ -324,8 +332,9 @@ const INITIAL_DEBTS = [
     { date: "2026-07-23", type: "platz", amount: -16, desc: "Platz 23.7." },
     { date: "2026-08-13", type: "platz", amount: -16, desc: "Platz 13.8." },
     { date: "2026-08-27", type: "platz", amount: -16, desc: "Platz 27.8." },
+    { date: "2026-09-02", type: "platz", amount: -15, desc: "Platz 2.9." },
   ]},
-  { person: "Simon V", amount: -68, note: "schuldet dir", history: [
+  { person: "Simon V", amount: -109, note: "schuldet dir", history: [
     { date: "2025-01-01", type: "saldo", amount: 40, desc: "Übernahme Splitwise-Saldo (du schuldest)" },
     { date: "2026-03-13", type: "platz", amount: -40, desc: "Platz 13.3." },
     { date: "2026-04-10", type: "platz", amount: -40, desc: "Platz 10.4." },
@@ -340,6 +349,8 @@ const INITIAL_DEBTS = [
     { date: "2026-08-13", type: "zahlung", amount: 130, desc: "Zahlung erhalten (€130)" },
     { date: "2026-08-17", type: "platz", amount: -26, desc: "Einzelcourt 17.8." },
     { date: "2026-08-27", type: "platz", amount: -21, desc: "Platz 27.8." },
+    { date: "2026-09-02", type: "platz", amount: -20, desc: "Platz 2.9." },
+    { date: "2026-09-10", type: "platz", amount: -21, desc: "Platz 10.9." },
   ]},
   { person: "Benzer", amount: 161, note: "Du schuldest", history: [
     { date: "2025-01-01", type: "saldo", amount: 132, desc: "Übernahme Splitwise-Saldo" },
@@ -352,16 +363,19 @@ const INITIAL_DEBTS = [
     { date: "2026-07-31", type: "platz", amount: -16, desc: "Platz 31.7." },
   ]},
   { person: "Matthias", amount: 0, note: "quitt", history: [] },
-  { person: "Santer", amount: 0, note: "quitt", history: [] },
-  { person: "Böhler", amount: 0, note: "quitt", history: [
+  { person: "Santer", amount: -21, note: "schuldet dir", history: [
+    { date: "2026-09-10", type: "platz", amount: -21, desc: "Platz 10.9." },
+  ]},
+  { person: "Böhler", amount: -20, note: "schuldet dir", history: [
     { date: "2025-01-01", type: "saldo", amount: -20, desc: "Übernahme Splitwise-Saldo (schuldet dir)" },
     { date: "2026-03-13", type: "zahlung", amount: 20, desc: "Zahlung erhalten" },
     { date: "2026-03-20", type: "platz", amount: -20, desc: "Platz 20.3." },
     { date: "2026-05-15", type: "zahlung", amount: 20, desc: "Zahlung erhalten (€20)" },
+    { date: "2026-09-02", type: "platz", amount: -20, desc: "Platz 2.9." },
   ]},
 ];
 
-const DATA_VERSION = "2026-08-27-v2"; // Bump this when hardcoded data changes
+const DATA_VERSION = "2026-09-11-v1"; // Bump this when hardcoded data changes
 
 // ============================================================
 // HELPERS
