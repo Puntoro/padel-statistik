@@ -750,7 +750,7 @@ export default function PadelTracker() {
     { id: "h2h", label: "Head-to-Head", icon: "⚔️" },
     { id: "charts", label: "Entwicklung", icon: "📈" },
     { id: "money", label: "Finanzen", icon: "💰" },
-    { id: "add", label: "Erfassen", icon: "➕" },
+    { id: "add", label: "Spieltage", icon: "➕" },
   ];
 
   if (!loaded) return (
