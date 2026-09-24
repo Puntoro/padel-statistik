@@ -7,8 +7,9 @@ Private Statistik- und Finanz-App für Renés Padel-Gruppe (Götzis) — React +
 - Veröffentlichung: **GitHub Pages** über das GitHub-Konto **Puntoro**, Repo `padel-statistik` → https://puntoro.github.io/padel-statistik/
 
 ## Stand (bei jeder Änderung mitziehen)
-- Live-Datenstand: `2026-09-11-v1`, letzter Spieltag 10.9.2026.
-- Salden: Max 59 € und Kasi 123 € (Guthaben, René schuldet) · Simon V 109 €, Santer 21 €, Böhler 20 € (schulden René) · Manuele 202 €, Benzer 161 € (Guthaben).
+- Live-Datenstand: `2026-09-24-v1`, letzter Spieltag 24.9.2026 (davor 15.9. mit Neuzugang Jerry).
+- Salden: Max 59 € und Kasi 123 € (Guthaben, René schuldet) · Simon V 130 €, Santer 105 € (inkl. Anteile für Jerry und Lukas Achmüller), Böhler 41 € (schulden René) · Manuele 202 €, Benzer 161 € (Guthaben).
+- Bekannte Lücke: „Direkte Duelle“ (`calcH2H`) zählt nur Spieltage mit genau zwei festen Teams — Tage mit wechselnden Paarungen (z. B. 24.9.) fehlen dort.
 - Spieltag 2.9.2026 steht nur in den Finanzen, nicht in der Spielstatistik (Ergebnisse unbekannt, René war nicht dabei).
 
 ## Daten pflegen
