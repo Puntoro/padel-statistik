@@ -377,12 +377,13 @@ const INITIAL_DEBTS = [
     { date: "2026-07-31", type: "platz", amount: -16, desc: "Platz 31.7." },
   ]},
   { person: "Matthias", amount: 0, note: "quitt", history: [] },
-  { person: "Santer", amount: -105, note: "schuldet dir", history: [
+  { person: "Santer", amount: 0, note: "quitt", history: [
     { date: "2026-09-10", type: "platz", amount: -21, desc: "Platz 10.9." },
     { date: "2026-09-15", type: "platz", amount: -21, desc: "Platz 15.9." },
     { date: "2026-09-15", type: "platz", amount: -21, desc: "Platz 15.9. (für Jerry)" },
     { date: "2026-09-24", type: "platz", amount: -21, desc: "Platz 24.9." },
     { date: "2026-09-24", type: "platz", amount: -21, desc: "Platz 24.9. (für Lukas Achmüller)" },
+    { date: "2026-09-25", type: "zahlung", amount: 105, desc: "Überweisung erhalten (€105)" },
   ]},
   { person: "Böhler", amount: -41, note: "schuldet dir", history: [
     { date: "2025-01-01", type: "saldo", amount: -20, desc: "Übernahme Splitwise-Saldo (schuldet dir)" },
@@ -394,7 +395,7 @@ const INITIAL_DEBTS = [
   ]},
 ];
 
-const DATA_VERSION = "2026-09-24-v1"; // Bump this when hardcoded data changes
+const DATA_VERSION = "2026-09-25-v1"; // Bump this when hardcoded data changes
 
 // ============================================================
 // HELPERS
